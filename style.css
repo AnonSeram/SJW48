@@ -1,3 +1,4 @@
+
 /* Styling tambahan untuk dropdown */
 .navbar-dark .navbar-nav .nav-link.active {
     color: ■#ffffff;
@@ -22,14 +23,21 @@ body {
     background-color: #f9f9f9;
 }
 
-
 .navbar-nav .nav-link {
     font-size: 1.25rem; /* Sesuaikan ukuran teks */
     margin-right: 20px; /* Tambahkan jarak antar item */
 }
 
 .navbar-brand {
-    margin-left: 20px; /* Atur jaraknya sesuai keinginan */
+    margin-left: 30px; /* Atur jaraknya sesuai keinginan */
+    padding: 0; /* Menghilangkan padding tambahan agar navbar tidak bertambah tinggi */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.navbar-brand img {
+    height: 60px; /* Atur tinggi logo sesuai keinginan */
+    width: auto; /* Menjaga proporsi logo */
 }
 
 .container-eventss {
@@ -284,59 +292,58 @@ h1 {
     border: none;
     border-radius: 0;
 }
-
-footer {
-    position: relative;
-    width: 100%;
+/* Pastikan tidak ada margin atau padding di html dan body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Styling Footer */
+footer {
+    width: 100vw; /* Memastikan footer penuh sepanjang layar */
+    background-color: #343a40; /* Warna latar belakang */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Pastikan footer-menu dan footer-social berada di tengah */
 .footer-menu, .footer-social {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.footer-menu {
-    font-weight: bold;
-}
-
+/* Styling Link di Footer */
 .footer-link {
-    color: #d1a22b; /* Warna emas untuk teks menu */
-    margin: 0 10px;
+    color: #d1a22b;
     text-decoration: none;
-    font-size: 1.2rem; /* Ukuran font yang lebih kecil */
+    font-size: 1.2rem;
+    margin: 0 10px;
+    margin-bottom: 10px;
 }
 
 .footer-link:hover {
-    color: #f1c40f; /* Warna hover untuk link */
+    color: #f1c40f;
 }
 
+/* Styling Ikon Sosial Media di Footer */
 .footer-social .social-icon {
-    color: #d1a22b; /* Warna ikon sosial media */
-    font-size: 0.8rem; /* Ukuran ikon lebih kecil */
+    color: #d1a22b;
+    font-size: 0.6rem;
     margin: 0 16px;
+    margin-bottom: 10px;
 }
 
 .footer-social .social-icon:hover {
-    color: #f1c40f; /* Warna hover untuk ikon */
+    color: #f1c40f;
 }
 
-footer .container {
-    width: 100%; /* Memastikan container penuh */
-    max-width: 100%; /* Menonaktifkan batas maksimal lebar */
-    padding-left: 0;
-    padding-right: 0;
-}
-
+/* Divider di Footer */
 .footer hr {
-    border-top: 1px solid #d1a22b; /* Garis divider berwarna emas */
+    border-top: 1px solid #d1a22b;
     width: 80%;
     margin: 10px auto;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
 }
