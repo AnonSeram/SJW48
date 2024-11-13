@@ -36,7 +36,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 100px; /* Atur tinggi logo sesuai keinginan */
+    height: 60px; /* Atur tinggi logo sesuai keinginan */
     width: auto; /* Menjaga proporsi logo */
 }
 
