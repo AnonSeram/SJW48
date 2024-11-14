@@ -229,6 +229,8 @@ h1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    color: #fff;
+    background-color: #f41515;
 }
 .card {
     position: relative;
@@ -300,7 +302,7 @@ footer {
 
 /* Styling Link di Footer */
 .footer-link {
-    color: #d1a22b;
+    color: #f41515;
     text-decoration: none;
     font-size: 1.2rem;
     margin: 0 10px;
@@ -308,12 +310,12 @@ footer {
 }
 
 .footer-link:hover {
-    color: #f1c40f;
+    color: #f41515;
 }
 
 /* Styling Ikon Sosial Media di Footer */
 .footer-social .social-icon {
-    color: #d1a22b;
+    color: #f41515;
     font-size: 0.6rem;
     margin: 0 16px;
     margin-bottom: 10px;
