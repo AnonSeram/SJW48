@@ -233,8 +233,9 @@ h1 {
     background-color: #f41515;
     font-size: 14px;
     border-radius: 0%;
-    margin-top: 200px;
     margin-bottom: 10px
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 .card {
