@@ -226,17 +226,13 @@ h1 {
 .btn-watch {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    position: absolute;
+    position: center;
     bottom: 20px;
     right: 20px;
     color: #fff;
     background-color: #f41515;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 0%;
-    margin-bottom: 10px
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 .card {
     position: relative;
