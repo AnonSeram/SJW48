@@ -85,7 +85,7 @@ body {
 }
 
 .footer-link {
-    color: #d1a22b; /* Warna emas untuk teks menu */
+    color: #f41515; /* Warna emas untuk teks menu */
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.2rem; /* Ukuran font yang lebih kecil */
@@ -93,18 +93,18 @@ body {
 }
 
 .footer-link:hover {
-    color: #f1c40f; /* Warna hover untuk link */
+    color: #f41515; /* Warna hover untuk link */
 }
 
 .footer-social .social-icon {
-    color: #d1a22b; /* Warna ikon sosial media */
+    color: #f41515; /* Warna ikon sosial media */
     font-size: 0.6rem; /* Ukuran ikon lebih kecil */
     margin: 0 16px;
     margin-bottom: 10px;
 }
 
 .footer-social .social-icon:hover {
-    color: #f1c40f; /* Warna hover untuk ikon */
+    color: #f41515; /* Warna hover untuk ikon */
 }
 
 .footer .container {
@@ -112,7 +112,7 @@ body {
 }
 
 .footer hr {
-    border-top: 1px solid #d1a22b; /* Garis divider berwarna emas */
+    border-top: 1px solid #f41515; /* Garis divider berwarna emas */
     width: 80%;
     margin: 10px auto;
 }
@@ -122,6 +122,8 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+    overflow-y: auto;   /* Pastikan scroll vertikal hanya muncul jika benar-benar diperlukan */
 }
 
 .btn-lg {
@@ -130,8 +132,26 @@ html, body {
     padding: 10px 20px;
     font-size: 28px;
     color:white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* 600 untuk Montserrat Medium Bold */
+    text-align: center;
+    margin: auto; /* Untuk memastikan tombol berada di tengah */
+    margin-top: 20px;
 }
 
 .btn-baru {
     border-radius: 0;
+}
+
+.modal-open {
+    overflow: hidden; /* Hilangkan overflow ketika modal terbuka */
+}
+
+
+.flex-container {
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
 }
