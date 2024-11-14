@@ -40,36 +40,6 @@ body {
     width: auto; /* Menjaga proporsi logo */
 }
 
-.container-eventss {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 10px;
-    text-align: center;
-}
-
-.container-eventss h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
-
-.events-grids {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.event-cards {
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
 .event-cards:hover {
     transform: scale(1.05);
 }
@@ -93,7 +63,7 @@ body {
 .events-grids {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 15px;
 }
 
 .event-items {
@@ -110,7 +80,7 @@ body {
     transition: transform 0.3s ease;
     padding: 20px;
     text-align: center;
-    width: 100%;
+    width: 80%;
 }
 
 .event-cards img {
@@ -178,6 +148,10 @@ h1 {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
+}
+
+.event-card:hover {
+    transform: scale(1.03); /* Scale up card on hover */
 }
 
 .event-card img {
@@ -266,9 +240,17 @@ h1 {
     font-weight: 800; /* Berat font Black */
 }
 
-.card-text {
+.card-text { 
     font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat Black */
     font-weight: 500; /* Berat font Black */
+}
+
+.card-body {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-body .name {
@@ -282,7 +264,7 @@ h1 {
 }
 
 .talents-section {
-    background-color: #f7f7f7;
+    background-image: url(img/BG2.png);
     padding: 3rem 0;
 }
 
