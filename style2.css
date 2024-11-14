@@ -104,7 +104,7 @@ body {
 }
 
 .footer-social .social-icon:hover {
-    color: #f41515; /* Warna hover untuk ikon */
+    color: #f1c40f; /* Warna hover untuk ikon */
 }
 
 .footer .container {
@@ -112,7 +112,7 @@ body {
 }
 
 .footer hr {
-    border-top: 1px solid #f41515; /* Garis divider berwarna emas */
+    border-top: 1px solid #d1a22b; /* Garis divider berwarna emas */
     width: 80%;
     margin: 10px auto;
 }
