@@ -17,32 +17,35 @@ emailjs.init("dfj4H774zyjlpFZeH"); // Ganti "YOUR_USER_ID" dengan User ID dari E
 document.getElementById("contact-form").addEventListener("submit", function(event) {
   event.preventDefault();
 
+  // Send email with form data
   emailjs.send("service_2hnvftm", "template_esetnpo", {
     from_name: document.getElementById("nama").value,
     from_email: document.getElementById("email").value,
     message: document.getElementById("message").value
   })
   .then(function(response) {
-    alert("Pesan berhasil dikirim!");
+    // Show success message with SweetAlert2
+    Swal.fire({
+      icon: 'success',
+      title: 'Pesan Berhasil Dikirim!',
+      text: 'Kami telah menerima pesan Anda.',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'OK'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        document.getElementById("contact-form").reset(); // Reset form fields
+      }
+    });
+
   }, function(error) {
-    alert("Gagal mengirim pesan. Silakan coba lagi.");
+    // Show error message with SweetAlert2
+    Swal.fire({
+      icon: 'error',
+      title: 'Pesan Gagal Diwaro!',
+      text: 'Silakan coba lagi nanti.',
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'OK'
+    });
   });
 });
 
-(function(){
-  emailjs.init("dfj4H774zyjlpFZeH"); // Ganti dengan Public Key EmailJS Anda
-})();
-
-document.getElementById("TalentForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // Mencegah form submit secara default
-  console.log('Form submitted'); // Log untuk memastikan form terpanggil
-
-  emailjs.sendForm('service_826bwrz', 'template_iya9my5', this)
-      .then(function(response) {
-          console.log('Success:', response.status, response.text); // Log untuk sukses
-          alert('Pesan kamu berhasil terkirim, terima kasih! Akan kami waro secepatnya!');
-      }, function(error) {
-          console.log('Failed:', error); // Log untuk error
-          alert('Failed to send booking request. Please try again.');
-      });
-});
