@@ -12,56 +12,6 @@ dropdownHover.addEventListener("mouseleave", function () {
     dropdownMenu.classList.remove("show");
 });
 
-// Form listener
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-  const subscribe = document.getElementById('subscribe').checked;
-
-  // Validasi form
-  if (!email || !message) {
-    Swal.fire({
-      title: 'Oops!',
-      text: 'Please fill in all the required fields.',
-      icon: 'error'
-    });
-    return;
-  }
-
-  // Konfirmasi pengiriman form
-  Swal.fire({
-    title: 'Are you sure?',
-    text: 'You want to submit the form?',
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes, submit it!'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: 'Submitted!',
-        text: `You ${subscribe ? 'have' : 'have not'} subscribed to the newsletter.`,
-        icon: 'success'
-      });
-
-      // Lanjutkan dengan Logika penanganan formulir
-      console.log('Email:', email);
-      console.log('Message:', message);
-      console.log('Subscribe:', subscribe);
-
-      // Reset form
-      form.reset();
-    } else {
-      // Jika dibatalkan, kembalikan checkbox ke status awal
-      document.getElementById('subscribe').checked = subscribe;
-    }
-  });
-});
-
 emailjs.init("dfj4H774zyjlpFZeH"); // Ganti "YOUR_USER_ID" dengan User ID dari EmailJS
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -77,4 +27,22 @@ document.getElementById("contact-form").addEventListener("submit", function(even
   }, function(error) {
     alert("Gagal mengirim pesan. Silakan coba lagi.");
   });
+});
+
+(function(){
+  emailjs.init("dfj4H774zyjlpFZeH"); // Ganti dengan Public Key EmailJS Anda
+})();
+
+document.getElementById("TalentForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Mencegah form submit secara default
+  console.log('Form submitted'); // Log untuk memastikan form terpanggil
+
+  emailjs.sendForm('service_826bwrz', 'template_iya9my5', this)
+      .then(function(response) {
+          console.log('Success:', response.status, response.text); // Log untuk sukses
+          alert('Pesan kamu berhasil terkirim, terima kasih! Akan kami waro secepatnya!');
+      }, function(error) {
+          console.log('Failed:', error); // Log untuk error
+          alert('Failed to send booking request. Please try again.');
+      });
 });
